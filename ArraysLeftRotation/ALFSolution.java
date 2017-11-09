@@ -54,7 +54,7 @@ public class Solution {
             System.out.print(rotArray[i] + " ");
              System.out.println();
              */
-            System.arraycopy(rotArray, 0, a, 0, 5);
+            System.arraycopy(rotArray, 0, a, 0, n);
             
         }
       
