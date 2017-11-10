@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-    public static int[] arrayLeftRotation(int[] a, int n, int k) {
+    public static int[] arrayLeftRotation_Old(int[] a, int n, int k) {
        int rotArray[] = new int[n]; 
         for (int j=0;j<k;j++)
         {
@@ -59,6 +59,56 @@ public class Solution {
         }
       
         return rotArray;
+    }
+    
+    
+    public static int[] arrayLeftRotation(int[] a, int n, int k) {
+      // int rotArray[] = new int[n];
+        
+        for (int j=0;j<k;j++)
+        {
+            /*System.out.println("Printing a ");
+            for(int i = 0; i < n; i++)
+            System.out.print(a[i] + " ");
+      
+        System.out.println();*/
+           
+            int oldVal = a[0];
+            for(int a_i=n-1;a_i>=0;a_i--)
+            {
+                /*
+                System.out.println("Printing value of a_i "+a_i);
+                System.out.println("Printing value of a[a_i] "+a[a_i]);
+                
+                */
+                
+                int temp = oldVal;
+                oldVal = a[a_i];
+                a[a_i] = temp;
+                /*System.out.println("Printing value of temp "+temp);
+                System.out.println("Printing value of oldVal "+oldVal);
+                System.out.println("Printing value of a[a_i] "+a[a_i]);
+                   
+                   System.out.println("Printing a after each shifting ");
+            for(int i = 0; i < n; i++)
+            System.out.print(a[i] + " ");
+      
+        System.out.println();
+          
+             */
+            }
+            /*
+            System.out.println("Printing a after shifting ");
+            for(int i = 0; i < n; i++)
+            System.out.print(a[i] + " ");
+      
+        System.out.println();
+            
+             */
+            
+        }
+      
+        return a;
     }
     
     public static void main(String[] args) {
